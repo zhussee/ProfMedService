@@ -1,0 +1,40 @@
+.page-breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    color: #667582;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.page-breadcrumbs a {
+    color: #0c76bc;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.page-breadcrumbs a:hover {
+    color: #095f98;
+    text-decoration: underline;
+}
+
+.page-breadcrumbs span {
+    color: #667582;
+}
+
+.page-breadcrumbs-separator {
+    color: #9aa6af;
+    user-select: none;
+}
+@media (max-width: 768px) {
+    .page-breadcrumbs {
+        gap: 6px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+}

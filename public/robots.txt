@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://profmedservice.info/sыitemap.xml

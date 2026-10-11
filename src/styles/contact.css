@@ -1,0 +1,277 @@
+.contacts-page {
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    background-color: #F7F9FC;
+}
+
+/* ========================================
+   ЗАГОЛОВОК СТРАНИЦЫ
+======================================== */
+
+.contacts-heading {
+    width: 100%;
+    color: #111111;
+    background-color: #f7f9fc;
+}
+
+.contacts-heading__container {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 22px 40px 30px;
+    box-sizing: border-box;
+}
+
+.contacts-heading__title {
+    width: 100%;
+    margin: 0;
+    color: #1b2733;
+    font-size: clamp(42px, 4.8vw, 72px);
+    font-weight: 700;
+    line-height: 1.15;
+    text-align: center;
+}
+
+
+/* ========================================
+   ОСНОВНОЙ БЛОК
+======================================== */
+
+.contacts-section {
+    width: 100%;
+    padding: 48px 0 64px;
+    background-color: #F7F9FC;
+}
+
+.contacts-container {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns:
+    minmax(420px, 1fr)
+    minmax(500px, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* ========================================
+   КАРТОЧКА КОНТАКТОВ
+======================================== */
+
+.contacts-card {
+    overflow: hidden;
+    background-color: #f7f9fc;
+    border-radius: 22px;
+}
+
+.contacts-card__item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    min-height: 126px;
+    padding: 20px 28px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.contacts-card__item:last-child {
+    border-bottom: none;
+}
+
+/* Иконка */
+
+.contacts-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.contacts-card__icon img {
+    display: block;
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+}
+
+/* Контент */
+
+.contacts-card__content {
+    min-width: 0;
+}
+
+.contacts-card__content p {
+    margin: 2px 0;
+    color: #111111;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.contacts-card__content a {
+    color: #111111;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contacts-card__content a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   КАРТА
+======================================== */
+
+.contacts-map {
+    position: relative;
+    min-height: 630px;
+    overflow: hidden;
+    background-color: #eeeeee;
+    border-radius: 16px;
+}
+
+.contacts-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 630px;
+    border: none;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1100px) {
+    .contacts-heading__container,
+    .contacts-container {
+        padding-right: 28px;
+        padding-left: 28px;
+    }
+
+    .contacts-grid {
+        grid-template-columns:
+      minmax(360px, 0.9fr)
+      minmax(430px, 1.1fr);
+    }
+
+    .contacts-card__item {
+        grid-template-columns: 68px 1fr;
+        min-height: 112px;
+        padding: 18px 22px;
+    }
+
+    .contacts-card__icon img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .contacts-card__content p,
+    .contacts-card__content a {
+        font-size: 16px;
+    }
+
+    .contacts-map,
+    .contacts-map iframe {
+        min-height: 560px;
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+    .contacts-heading__container {
+        padding: 18px 20px 24px;
+    }
+
+    .contacts-heading__title {
+        font-size: 38px;
+    }
+
+    .contacts-section {
+        padding: 24px 0 36px;
+    }
+
+    .contacts-container {
+        padding: 0 16px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacts-card {
+        border-radius: 16px;
+    }
+
+    .contacts-card__item {
+        grid-template-columns: 58px 1fr;
+        min-height: 96px;
+        padding: 16px 18px;
+    }
+
+    .contacts-card__icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contacts-card__content p,
+    .contacts-card__content a {
+        font-size: 15px;
+    }
+
+    .contacts-map {
+        min-height: 420px;
+        border-radius: 16px;
+    }
+
+    .contacts-map iframe {
+        min-height: 420px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+    .contacts-heading__title {
+        font-size: 32px;
+    }
+
+    .contacts-card__item {
+        grid-template-columns: 48px 1fr;
+        min-height: 88px;
+        padding: 14px;
+    }
+
+    .contacts-card__icon img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .contacts-card__content p,
+    .contacts-card__content a {
+        font-size: 14px;
+    }
+
+    .contacts-map {
+        min-height: 340px;
+    }
+
+    .contacts-map iframe {
+        min-height: 340px;
+    }
+}

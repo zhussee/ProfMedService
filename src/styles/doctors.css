@@ -1,0 +1,295 @@
+/* ========================================
+   PAGE
+======================================== */
+
+.doctors-page {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: #f7f9fc;
+}
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+
+.doctors-page-heading {
+    width: 100%;
+    background-color: #f7f9fc;
+}
+
+.doctors-page-heading__container {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 22px 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Заголовок и описание */
+
+.doctors-page-heading__content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.doctors-heading__title {
+    margin: 0;
+
+    color: #1b2733;
+    font-size: clamp(42px, 4.8vw, 72px);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.doctors-heading__description {
+    max-width: 900px;
+    margin: 20px auto 0;
+
+    color: #637381;
+    font-size: 18px;
+    line-height: 1.65;
+    text-align: center;
+}
+
+/* ========================================
+   DOCTORS SECTION
+======================================== */
+
+.doctors-section {
+    padding: 72px 40px 100px;
+}
+
+.doctors-container {
+    width: 100%;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   GRID
+======================================== */
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+}
+
+/* ========================================
+   DOCTOR CARD
+======================================== */
+
+.doctor-card {
+    min-width: 0;
+    overflow: hidden;
+
+    background-color: #ffffff;
+    border: 1px solid #e9eef4;
+    border-radius: 22px;
+
+    box-shadow: 0 8px 28px rgba(27, 39, 51, 0.07);
+
+    transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 38px rgba(27, 39, 51, 0.13);
+}
+
+/* Фото врача */
+
+.doctor-card__image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+
+    background-color: #e9eef4;
+}
+
+.doctor-card__image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center top;
+
+    filter: contrast(1.03) saturate(1.05);
+    image-rendering: auto;
+
+    transition: transform 0.35s ease;
+}
+
+.doctor-card:hover .doctor-card__image {
+    transform: scale(1.035);
+}
+
+/* Контент карточки */
+
+.doctor-card__content {
+    min-height: 134px;
+    padding: 22px 22px 24px;
+    box-sizing: border-box;
+}
+
+.doctor-card__name {
+    margin: 0;
+
+    color: #172b3a;
+    font-size: 20px;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.doctor-card__specialization {
+    margin: 10px 0 0;
+
+    color: #0c76bc;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 1300px) {
+    .doctors-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 960px) {
+    .doctors-page-heading__container {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .doctors-section {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 780px) {
+    .doctors-page-heading__container {
+        padding: 18px 20px 32px;
+    }
+
+
+    .doctors-heading__title {
+        font-size: 38px;
+    }
+
+    .doctors-heading__description {
+        margin-top: 14px;
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+    .doctors-page {
+        padding-top: 0;
+    }
+
+    .doctors-page-heading__container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .doctors-heading__title {
+        font-size: 34px;
+    }
+
+    .doctors-heading__description {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .doctors-section {
+        padding: 48px 16px 70px;
+    }
+
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .doctor-card__content {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .doctor-card__name {
+        font-size: 19px;
+    }
+
+    .doctor-card__specialization {
+        font-size: 15px;
+    }
+}
+
+/* ========================================
+   VERY SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+    .doctors-page-heading__container {
+        padding-top: 16px;
+        padding-bottom: 26px;
+    }
+
+    .doctors-heading__title {
+        font-size: 30px;
+    }
+
+    .doctors-heading__description {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    .doctors-section {
+        padding-top: 36px;
+    }
+
+    .doctor-card {
+        border-radius: 18px;
+    }
+
+    .doctor-card__content {
+        padding: 18px;
+    }
+
+    .doctor-card__name {
+        font-size: 18px;
+    }
+
+    .doctor-card__specialization {
+        font-size: 14px;
+    }
+}
